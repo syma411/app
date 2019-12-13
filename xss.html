@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>XSSサンプル</title>
+</head>
+<body>
+	<p>値を入力してください</p>
+	<script>
+		function onButtonClick(){
+			var inputText = document.getElementById("xss").value;
+			document.getElementById("output").innerHTML = inputText;
+		}
+	</script>
+
+        <input name="textBox1" id="xss" type="text" value="">
+        <input type="button" value="送信" onClick="onButtonClick()" />
+
+   	<hr/>
+   	<div id="output"></div>
+</body>
+</html>
